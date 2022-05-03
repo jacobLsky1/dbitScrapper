@@ -6,12 +6,11 @@ import pymongo
 from pymongo import MongoClient, InsertOne
 from collections import defaultdict
 from datetime import datetime
-import certifi
 
 
 # gets all documents from collection
 
-client = pymongo.MongoClient('mongodb+srv://jgme4350:jgme4350@cluster0.nkehi.mongodb.net/dbit_control_db?retryWrites=true&w=majority', tlsCAFile=certifi.where())
+client = pymongo.MongoClient('mongodb+srv://jgme4350:jgme4350@cluster0.nkehi.mongodb.net/dbit_control_db?retryWrites=true&w=majority')
 db = client.app_main_database
 collection = db["appsSummery"]
 cursor = collection.find()
